@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AiTon_BaMin_KePiao_2016-2-29.iml" filepath="$PROJECT_DIR$/AiTon_BaMin_KePiao_2016-2-29.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SMSSDK/SMSSDK.iml" filepath="$PROJECT_DIR$/SMSSDK/SMSSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleimageview/circleimageview.iml" filepath="$PROJECT_DIR$/circleimageview/circleimageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_shane/lib_shane.iml" filepath="$PROJECT_DIR$/lib_shane/lib_shane.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/下拉放大图片/下拉放大图片.iml" filepath="$PROJECT_DIR$/下拉放大图片/下拉放大图片.iml" />
+      <module fileurl="file://$PROJECT_DIR$/八闽出行/八闽出行.iml" filepath="$PROJECT_DIR$/八闽出行/八闽出行.iml" />
+    </modules>
+  </component>
+</project>
