@@ -7,12 +7,12 @@ import android.view.MenuItem;
 
 import com.example.zjb.bamin.R;
 
-public class PayActivity extends AppCompatActivity {
+public class PayBusLineActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pay);
+        setContentView(R.layout.activity_online_pay);
     }
 
     @Override

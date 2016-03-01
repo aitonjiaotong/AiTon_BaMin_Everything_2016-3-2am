@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.zjb.bamin.R;
-import com.example.zjb.bamin.busline.busline_aiton.PayActivity;
+import com.example.zjb.bamin.busline.busline_aiton.PayBusLineActivity;
 
 
 /**
@@ -56,7 +56,7 @@ public class RechargeFragment extends Fragment implements View.OnClickListener {
         Intent intent= new Intent();
         switch (v.getId()) {
             case R.id.rechargeButton:
-                intent.setClass(getActivity(),PayActivity.class);
+                intent.setClass(getActivity(),PayBusLineActivity.class);
                 startActivity(intent);
                 break;
             case R.id.charge500:

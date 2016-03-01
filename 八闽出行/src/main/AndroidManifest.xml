@@ -258,7 +258,7 @@
             android:label="@string/title_activity_bus_line_info" >
         </activity>
         <activity
-            android:name=".busline.busline_aiton.PayActivity"
+            android:name=".busline.busline_aiton.PayBusLineActivity"
             android:label="@string/title_activity_pay" >
         </activity>
         <activity
