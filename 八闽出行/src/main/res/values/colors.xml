@@ -25,6 +25,23 @@
 
     <color name="half_color">#30000000</color>
 
+    <!--公交颜色-->
+    <color name="bg_green_normal">#ff7d27</color>
+    <color name="bg_green_selector">#FFFF5218</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_gray">#f0f0f0</color>
+    <color name="bg_transparent_black">#99000000</color>
+    <color name="bg_red">#f85959</color>
+    <color name="fengexian_color">#e8e8e8</color>
+
+    <color name="hint_gray">#c3c3c3</color>
+
+    <color name="aiton_green">#ff7d27</color>
+    <color name="aiton_gray">#b6b6b6</color>
+
+    <color name="tv_black_normal">#000000</color>
+    <color name="tv_black_pressed">#C0C0C0</color>
+    <!--公交颜色-->
 
 
 
