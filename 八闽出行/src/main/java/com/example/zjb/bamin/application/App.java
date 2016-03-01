@@ -3,6 +3,7 @@ package com.example.zjb.bamin.application;
 import android.app.Application;
 import android.content.Context;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -16,6 +17,7 @@ public class App extends Application{
     public void onCreate() {
         super.onCreate();
         initImageLoader(getApplicationContext());
+        SDKInitializer.initialize(this);
     }
     public static void initImageLoader(Context context) {
         // This configuration tuning is custom. You can tune every option, you

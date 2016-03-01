@@ -16,14 +16,17 @@ import com.android.volley.VolleyError;
 import com.example.administrator.shane_library.shane.utils.GsonUtils;
 import com.example.administrator.shane_library.shane.utils.HTTPUtils;
 import com.example.administrator.shane_library.shane.utils.VolleyListener;
+import com.example.zjb.bamin.ChiHeWanLe.MainCheHeWanLeActivity;
 import com.example.zjb.bamin.DaCheActivity.MainDacheActivity;
 import com.example.zjb.bamin.MainActivity;
 import com.example.zjb.bamin.R;
 import com.example.zjb.bamin.busline.busline_aiton.MainBusLineActivity;
 import com.example.zjb.bamin.constant.Constant;
 import com.example.zjb.bamin.customView.ViewPagerIndicator;
+import com.example.zjb.bamin.daiBanPaoTui.MainDaiBanPaoTuiActivity;
 import com.example.zjb.bamin.fragment.BannerFragment;
 import com.example.zjb.bamin.models.about_banner.BannerInfo;
+import com.example.zjb.bamin.qicheguanjia.MainQiCheGuanJiaActivity;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -124,6 +127,9 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         mLl_onlinebus.setOnClickListener(this);
         mLl_ticket.setOnClickListener(this);
         mLl_taxi.setOnClickListener(this);
+        mLayout.findViewById(R.id.chihewanle).setOnClickListener(this);
+        mLayout.findViewById(R.id.daibanpaotui).setOnClickListener(this);
+        mLayout.findViewById(R.id.qicheguanjia).setOnClickListener(this);
     }
 
 
@@ -133,6 +139,18 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         Intent intent = new Intent();
         switch (v.getId())
         {
+            case R.id.daibanpaotui:
+                intent.setClass(getActivity(),MainDaiBanPaoTuiActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.qicheguanjia:
+                intent.setClass(getActivity(), MainQiCheGuanJiaActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.chihewanle:
+                intent.setClass(getActivity(),MainCheHeWanLeActivity.class);
+                startActivity(intent);
+                break;
             case R.id.ll_onlinebus:
                 intent.setClass(getActivity(), MainBusLineActivity.class);
                 startActivity(intent);
