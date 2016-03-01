@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.example.zjb.bamin.DaCheActivity.MainDacheActivity;
 import com.example.zjb.bamin.MainActivity;
 import com.example.zjb.bamin.R;
 
@@ -78,7 +79,7 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.ll_taxi:
-                intent.setClass(getActivity(),MainActivity.class);
+                intent.setClass(getActivity(),MainDacheActivity.class);
                 startActivity(intent);
                 break;
 

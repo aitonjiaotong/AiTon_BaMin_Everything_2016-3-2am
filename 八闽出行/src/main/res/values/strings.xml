@@ -42,6 +42,23 @@
     <string name="title_activity_back_ticket">BackTicketActivity</string>
     <string name="title_activity_everyting">八闽出行</string>
 
+    <!--打车-->
+    <string name="title_activity_da_che">DaCheActivity</string>
+    <string name="title_activity_dai_jia">DaiJiaActivity</string>
+    <string name="title_activity_dai_jia02">DaiJia02Activity</string>
+    <string name="title_activity_ji_gou_yong_che">JiGouYongCheActivity</string>
+    <string name="title_activity_ji_gou_yong_che02">JiGouYongChe02Activity</string>
+    <string name="title_activity_ji_gou_yong_che04">JiGouYongCheActivity04</string>
+    <string name="title_activity_ji_gou_yong_che03">JiGouYongChe03Activity</string>
+    <string name="title_activity_men_dian">MenDianActivity</string>
+    <string name="title_activity_te_jia_tao_can">TeJiaTaoCanActivity</string>
+    <string name="title_activity_te_jia_tao_can02">TeJiaTaoCan02Activity</string>
+    <string name="title_activity_zi_jia_zu_che">ZiJiaZuCheActivity</string>
+    <string name="title_activity_zi_jia_zu_che02">ZiJiaZuChe02Activity</string>
+    <string name="title_activity_zi_jia_zu_che03">ZiJiaZuChe03Activity</string>
+    <string name="title_activity_zi_jia_zu_che04">ZiJiaZuChe04Activity</string>
+    <string name="title_activity_zi_jia_zu_che05">ZiJiaZuChe05Activity</string>
+    <!--打车-->
 
 
 </resources>

@@ -141,6 +141,76 @@
             </intent-filter>
         </activity>
 
+        <!--打车类Activity-->
+        <activity
+            android:name=".DaCheActivity.MainDacheActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.DaCheActivity"
+            android:label="@string/title_activity_da_che" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.DaiJiaActivity"
+            android:label="@string/title_activity_dai_jia" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.DaiJia02Activity"
+            android:label="@string/title_activity_dai_jia02" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.JiGouYongCheActivity"
+            android:label="@string/title_activity_ji_gou_yong_che" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.JiGouYongChe04Activity"
+            android:label="@string/title_activity_ji_gou_yong_che02" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.JiGouYongCheActivity04"
+            android:label="@string/title_activity_ji_gou_yong_che04" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.JiGouYongChe02Activity"
+            android:label="@string/title_activity_ji_gou_yong_che02" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.JiGouYongChe03Activity"
+            android:label="@string/title_activity_ji_gou_yong_che03" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.MenDianActivity"
+            android:label="@string/title_activity_men_dian" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.TeJiaTaoCanActivity"
+            android:label="@string/title_activity_te_jia_tao_can" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.TeJiaTaoCan02Activity"
+            android:label="@string/title_activity_te_jia_tao_can02" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.ZiJiaZuCheActivity"
+            android:label="@string/title_activity_zi_jia_zu_che" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.ZiJiaZuChe02Activity"
+            android:label="@string/title_activity_zi_jia_zu_che02" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.ZiJiaZuChe03Activity"
+            android:label="@string/title_activity_zi_jia_zu_che03" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.ZiJiaZuChe04Activity"
+            android:label="@string/title_activity_zi_jia_zu_che04" >
+        </activity>
+        <activity
+            android:name=".DaCheActivity.ZiJiaZuChe05Activity"
+            android:label="@string/title_activity_zi_jia_zu_che05" >
+        </activity>
+        <!--打车类Activity-->
 
     </application>
 
