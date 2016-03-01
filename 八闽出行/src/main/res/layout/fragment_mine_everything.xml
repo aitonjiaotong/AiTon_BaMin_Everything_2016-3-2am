@@ -26,8 +26,81 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:background="@mipmap/a01"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="160dp">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:src="@mipmap/a02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView17"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView17"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/relativeLayout13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张小闽"
+                    android:textColor="@color/title_bar"
+                    android:id="@+id/textView17"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="普卡会员"
+                    android:id="@+id/textView18"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView17"
+                    android:layout_toEndOf="@+id/textView17"/>
+            </RelativeLayout>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15871105320"
+                android:id="@+id/textView19"
+                android:layout_below="@+id/relativeLayout13"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
     </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/textView20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView21"/>
+    </LinearLayout>
 </LinearLayout>
