@@ -132,6 +132,7 @@
         </activity>
         <activity
             android:name=".EverytingActivity"
+            android:windowSoftInputMode="adjustNothing"
             android:label="@string/title_activity_everyting" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
