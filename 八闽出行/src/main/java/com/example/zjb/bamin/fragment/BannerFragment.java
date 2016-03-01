@@ -124,14 +124,6 @@ public class BannerFragment extends Fragment
         tv_rule.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
         TextView money = (TextView) view.findViewById(R.id.tv_money);
         money.setText(moneyStr);
-        view.findViewById(R.id.iv_dispop).setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                pop.dismiss();
-            }
-        });
         view.findViewById(R.id.btn_ikow).setOnClickListener(new View.OnClickListener()
         {
             @Override

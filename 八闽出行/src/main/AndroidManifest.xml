@@ -134,6 +134,10 @@
             android:name=".BackTicketActivity"
             android:label="@string/title_activity_back_ticket" >
         </activity>
+        <activity
+            android:name=".EverytingActivity"
+            android:label="@string/title_activity_everyting" >
+        </activity>
     </application>
 
 </manifest>
