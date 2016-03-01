@@ -152,6 +152,7 @@ public class BannerFragment extends Fragment
             @Override
             public void onDismiss()
             {
+
                 WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
                 lp.alpha = 1f;
                 getActivity().getWindow().setAttributes(lp);
