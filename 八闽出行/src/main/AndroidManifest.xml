@@ -265,6 +265,144 @@
             android:label="@string/title_activity_map" >
         </activity>
         <!--公交-->
+        <!--吃喝玩乐-->
+        <activity
+            android:name=".ChiHeWanLe.MainCheHeWanLeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.MeiYuanActivity"
+            android:label="@string/title_activity_mei_yuan" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.QiangGuoActivity"
+            android:label="@string/title_activity_qiang_guo" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.AActivity"
+            android:label="@string/title_activity_a" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.BActivity"
+            android:label="@string/title_activity_b" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.CActivity"
+            android:label="@string/title_activity_c" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.EActivity"
+            android:label="@string/title_activity_e" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.DActivity"
+            android:label="@string/title_activity_d" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.FActivity"
+            android:label="@string/title_activity_f" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.GActivity"
+            android:label="@string/title_activity_g" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.HActivity"
+            android:label="@string/title_activity_h" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.IActivity"
+            android:label="@string/title_activity_i" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.JActivity"
+            android:label="@string/title_activity_j" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.KActivity"
+            android:label="@string/title_activity_k" >
+        </activity>
+        <activity
+            android:name=".ChiHeWanLe.LActivity"
+            android:label="@string/title_activity_l" >
+        </activity>
+        <!--吃喝玩乐-->
+        <!--代办跑腿-->
+        <activity
+            android:name=".daiBanPaoTui.MainDaiBanPaoTuiActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiActivity"
+            android:label="@string/title_activity_pao_tui" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiShunGouActivity"
+            android:label="@string/title_activity_pao_tui_shun_gou" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.GouWuCheActivity"
+            android:label="@string/title_activity_gou_wu_che" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiQuSongActivity"
+            android:label="@string/title_activity_pao_tui_qu_song" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiQuSong02Activity"
+            android:label="@string/title_activity_pao_tui_qu_song02" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiPaiDuiActivity"
+            android:label="@string/title_activity_pao_tui_pai_dui" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.PaoTuiPaiDui02Activity"
+            android:label="@string/title_activity_pao_tui_pai_dui02" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.SiRenDingZhiActivity"
+            android:label="@string/title_activity_si_ren_ding_zhi" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.SiRenDingZhi02Activity"
+            android:label="@string/title_activity_si_ren_ding_zhi02" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.DaiJiaActivity"
+            android:label="@string/title_activity_dai_jia" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.DaiJia02Activity"
+            android:label="@string/title_activity_dai_jia02" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.JiaoNaFaKuanActivity"
+            android:label="@string/title_activity_jiao_na_fa_kuan" >
+        </activity>
+        <activity
+            android:name=".daiBanPaoTui.SongCanActivity"
+            android:label="@string/title_activity_song_can" >
+        </activity>
+        <!--代办跑腿-->
+        <!--汽车管家-->
+        <activity
+            android:name=".qicheguanjia.MainQiCheGuanJiaActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".qicheguanjia.AActivity"
+            android:label="@string/title_activity_a" >
+        </activity>
+        <activity
+            android:name=".qicheguanjia.BActivity"
+            android:label="@string/title_activity_b" >
+        </activity>
+        <activity
+            android:name=".qicheguanjia.CActivity"
+            android:label="@string/title_activity_c" >
+        </activity>
+        <!--汽车管家-->
     </application>
 
 </manifest>

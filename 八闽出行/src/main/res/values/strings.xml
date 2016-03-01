@@ -100,5 +100,36 @@
     <string name="title_activity_bus_line_info">BusLineInfoActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <!--公交-->
-
+    <!--吃喝玩乐-->
+    <string name="title_activity_mei_yuan">MeiYuanActivity</string>
+    <string name="title_activity_qiang_guo">QiangGuoActivity</string>
+    <string name="title_activity_a">AActivity</string>
+    <string name="title_activity_b">BActivity</string>
+    <string name="title_activity_c">CActivity</string>
+    <string name="title_activity_d">DActivity</string>
+    <string name="title_activity_e">EActivity</string>
+    <string name="title_activity_f">FActivity</string>
+    <string name="title_activity_g">GActivity</string>
+    <string name="title_activity_h">HActivity</string>
+    <string name="title_activity_i">IActivity</string>
+    <string name="title_activity_j">JActivity</string>
+    <string name="title_activity_k">KActivity</string>
+    <string name="title_activity_l">LActivity</string>
+    <string name="title_activity_yan_jiang_lou">YanJiangLouActivity</string>
+    <!--吃喝玩乐-->
+    <!--代办跑腿-->
+    <string name="title_activity_pao_tui">PaoTuiActivity</string>
+    <string name="title_activity_pao_tui_shun_gou">PaoTuiShunGouActivity</string>
+    <string name="title_activity_gou_wu_che">GouWuCheActivity</string>
+    <string name="title_activity_pao_tui_qu_song">PaoTuiQuSongActivity</string>
+    <string name="title_activity_pao_tui_qu_song02">PaoTuiQuSong02Activity</string>
+    <string name="title_activity_pao_tui_pai_dui">PaoTuiPaiDuiActivity</string>
+    <string name="title_activity_pao_tui_pai_dui02">PaoTuiPaiDui02Activity</string>
+    <string name="title_activity_si_ren_ding_zhi">SiRenDingZhiActivity</string>
+    <string name="title_activity_si_ren_ding_zhi02">SiRenDingZhi02Activity</string>
+    <string name="title_activity_jiao_na_fa_kuan">JiaoNaFaKuanActivity</string>
+    <string name="title_activity_song_can">SongCanActivity</string>
+    <!--代办跑腿-->
+    <!--汽车管家-->
+    <!--汽车管家-->
 </resources>
