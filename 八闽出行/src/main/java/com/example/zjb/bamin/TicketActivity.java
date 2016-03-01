@@ -20,6 +20,7 @@ import com.example.administrator.shane_library.shane.utils.VolleyListener;
 import com.example.zjb.bamin.constant.Constant;
 import com.example.zjb.bamin.models.about_ticket.TicketInfo;
 import com.example.zjb.bamin.utils.DateCompareUtil;
+import com.example.zjb.bamin.utils.LogUtil;
 import com.google.gson.reflect.TypeToken;
 
 import org.dom4j.Document;
@@ -50,8 +51,8 @@ public class TicketActivity extends AppCompatActivity implements View.OnClickLis
     private ImageView mBack;
     private String mResult;
     private List<TicketInfo> mTicketInfoList = new ArrayList<>();
-    private String start = URLEncoder.encode("永安");
-    private String end = URLEncoder.encode("村头");
+    private String start;
+    private String end;
     private String mDateMath;
     private String mCheckedTime;
     private String mCurrentTime;
@@ -74,8 +75,8 @@ public class TicketActivity extends AppCompatActivity implements View.OnClickLis
         mLv_ticket.setVisibility(View.GONE);
         String url_web = Constant.URL.HOST +
                 "GetSellableScheduleByStartCityName?executeDate=" + mCheckedTime +
-                "&startCityName=" + start +
-                "&endSiteNamePart=" + end;
+                "&startCityName=" + URLEncoder.encode(start )+
+                "&endSiteNamePart=" + URLEncoder.encode(end );
         HTTPUtils.get(TicketActivity.this, url_web, new VolleyListener() {
             public void onErrorResponse(VolleyError volleyError) {
             }
@@ -108,7 +109,9 @@ public class TicketActivity extends AppCompatActivity implements View.OnClickLis
         mMonth = intent.getIntExtra(Constant.IntentKey.CURR_MONTH, -1);
         mDayOfMonth = intent.getIntExtra(Constant.IntentKey.CURR_DAY_OF_MONTH, -1);
         start = intent.getStringExtra(Constant.IntentKey.FINAIL_SET_OUT_STATION);
+        LogUtil.show("initIntent TicketActivity-->start:", start);
         end = intent.getStringExtra(Constant.IntentKey.FINAIL_ARRIVE_STATION);
+        LogUtil.show("initIntent TicketActivity-->end", end);
     }
 
     private void initUI() {
