@@ -1,6 +1,7 @@
 package com.example.zjb.bamin.everything_fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.example.zjb.bamin.MainActivity;
 import com.example.zjb.bamin.R;
 
 /**
@@ -65,16 +67,19 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
+        Intent intent= new Intent();
         switch (v.getId())
         {
             case R.id.ll_onlinebus:
 
                 break;
             case R.id.ll_ticket:
-
+                intent.setClass(getActivity(),MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_taxi:
-
+                intent.setClass(getActivity(),MainActivity.class);
+                startActivity(intent);
                 break;
 
         }
