@@ -300,10 +300,17 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
                 {
                 }.getType();
                 SetOutData = GsonUtils.parseJSONArray(s, type);
-                mAddressSetOutData = SetOutData.get(0).getSubZones().get(0).getSubZones();
                 /**----移除列表中ZoneName为"市区"的下标值----**/
                 /****注意:目前返回的Json该值位于List的最后一个元素****/
-                mAddressSetOutData.remove((mAddressSetOutData.size() - 1));
+                for (int i = 0; i < SetOutData.size(); i++)
+                {
+                    for (int j = 0; j < SetOutData.get(i).getSubZones().size(); j++)
+                    {
+                        mAddressSetOutData.addAll(SetOutData.get(i).getSubZones().get(j).getSubZones());
+                        mAddressSetOutData.remove((mAddressSetOutData.size() - 1));
+                    }
+
+                }
                 if (mAddressSetOutData != null && mAddressSetOutData.size() > 0)
                 {
                     pinYin_data = getPinYin(mAddressSetOutData);
