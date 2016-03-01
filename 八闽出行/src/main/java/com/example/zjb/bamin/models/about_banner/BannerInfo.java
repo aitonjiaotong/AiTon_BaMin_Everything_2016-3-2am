@@ -6,15 +6,20 @@ package com.example.zjb.bamin.models.about_banner;
 public class BannerInfo
 {
 
+
     /**
      * id : 1
      * name : banner01
      * url : http://120.24.46.15:8080/bmpw/img/banner01.png
+     * url2 : http://120.24.46.15:8080/bmpw/front/getRedEnvelope?activity=4
+     * flag : null
      */
 
     private int id;
     private String name;
     private String url;
+    private String url2;
+    private Object flag;
 
     public void setId(int id)
     {
@@ -31,6 +36,16 @@ public class BannerInfo
         this.url = url;
     }
 
+    public void setUrl2(String url2)
+    {
+        this.url2 = url2;
+    }
+
+    public void setFlag(Object flag)
+    {
+        this.flag = flag;
+    }
+
     public int getId()
     {
         return id;
@@ -44,5 +59,15 @@ public class BannerInfo
     public String getUrl()
     {
         return url;
+    }
+
+    public String getUrl2()
+    {
+        return url2;
+    }
+
+    public Object getFlag()
+    {
+        return flag;
     }
 }

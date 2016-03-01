@@ -118,8 +118,6 @@ public class Fragment01 extends Fragment implements View.OnClickListener
                 {
                 }.getType();
                 bannerData = GsonUtils.parseJSONArray(s, type);
-                Log.e("onResponse ", s);
-                Log.e("onResponse ", bannerData.get(0).getUrl());
             }
         });
     }
@@ -293,40 +291,7 @@ public class Fragment01 extends Fragment implements View.OnClickListener
                 }
             }
         },mYear, mMonth - 1, mDayOfMonth).show(getActivity().getFragmentManager(),"datePicker");
-//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//        View inflate = getLayoutInflater(getArguments()).inflate(R.layout.datepicker_dialog, null);
-//        DatePicker datePicker = (DatePicker) inflate.findViewById(R.id.datePicker);
-//        datePicker.init(mYear, mMonth - 1, mDayOfMonth, new DatePicker.OnDateChangedListener()
-//        {
-//            @Override
-//            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth)
-//            {
-//                try
-//                {
-//                    mDateCompare = DateCompareUtil.DateCompare(year + "-" + (monthOfYear+1) + "-" + dayOfMonth, c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH)+1) + "-" + c.get(Calendar.DAY_OF_MONTH));
-//                    Log.e("onDateChanged ", "onDateChanged "+year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
-//                } catch (Exception e)
-//                {
-//                    e.printStackTrace();
-//                }
-//                if (mDateCompare)
-//                {
-//                    mYear = year;
-//                    mMonth = monthOfYear + 1;
-//                    mDayOfMonth = dayOfMonth;
-//                    mTv_date.setText(mYear + "-" + mMonth + "-" + mDayOfMonth);
-//                    mAlertDialog.cancel();
-//                } else
-//                {
-//                    Toast.makeText(getActivity(), "预售三天内的车票，请重新选择！", Toast.LENGTH_SHORT).show();
-//                    mTv_date.setText(mYear + "-" + mMonth + "-" + mDayOfMonth);
-//                }
-//            }
-//
-//        });
-//        builder.setView(inflate);
-//        mAlertDialog = builder.create();
-//        mAlertDialog.show();
+
     }
 
     class MyPagerAdapter extends FragmentPagerAdapter
@@ -347,7 +312,7 @@ public class Fragment01 extends Fragment implements View.OnClickListener
             }else
             {
                 int pager_index = position % bannerData.size();
-                return new BannerFragment(pager_index, bannerData.get(pager_index).getUrl());
+                return new BannerFragment(pager_index, bannerData.get(pager_index).getUrl(),bannerData.get(pager_index).getUrl2());
             }
         }
 
