@@ -202,12 +202,12 @@
 
     <Button
         android:background="#ff4c20"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="退出"
+        android:text="注销账号"
         android:textColor="@color/white"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"/>
