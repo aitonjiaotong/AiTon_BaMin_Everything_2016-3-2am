@@ -20,6 +20,8 @@ import com.example.zjb.bamin.ChiHeWanLe.MainCheHeWanLeActivity;
 import com.example.zjb.bamin.DaCheActivity.MainDacheActivity;
 import com.example.zjb.bamin.MainActivity;
 import com.example.zjb.bamin.R;
+import com.example.zjb.bamin.TeKuaiShangCheng.TeKuaiShangChengActivity;
+import com.example.zjb.bamin.YouHuiChongZhi.YuoHuiChongZhiActivity;
 import com.example.zjb.bamin.busline.busline_aiton.MainBusLineActivity;
 import com.example.zjb.bamin.constant.Constant;
 import com.example.zjb.bamin.customView.ViewPagerIndicator;
@@ -132,6 +134,9 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         mLayout.findViewById(R.id.chihewanle).setOnClickListener(this);
         mLayout.findViewById(R.id.daibanpaotui).setOnClickListener(this);
         mLayout.findViewById(R.id.qicheguanjia).setOnClickListener(this);
+        mLayout.findViewById(R.id.youhuishangcheng).setOnClickListener(this);
+        mLayout.findViewById(R.id.tekuaishangcheng).setOnClickListener(this);
+        mLayout.findViewById(R.id.baoxianchaoshi).setOnClickListener(this);
         mLayout.findViewById(R.id.lvyoulvxing).setOnClickListener(this);
         mLayout.findViewById(R.id.kuaidiwuliu).setOnClickListener(this);
     }
@@ -153,6 +158,7 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                 break;
             case R.id.lvyoulvxing:
                 intent.setClass(getActivity(),MainlvyouActivity.class);
+                intent.setClass(getActivity(), MainDaiBanPaoTuiActivity.class);
                 startActivity(intent);
                 break;
             case R.id.qicheguanjia:
@@ -160,7 +166,7 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.chihewanle:
-                intent.setClass(getActivity(),MainCheHeWanLeActivity.class);
+                intent.setClass(getActivity(), MainCheHeWanLeActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ll_onlinebus:
@@ -173,6 +179,14 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                 break;
             case R.id.ll_taxi:
                 intent.setClass(getActivity(), MainDacheActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.youhuishangcheng:
+                intent.setClass(getActivity(), YuoHuiChongZhiActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tekuaishangcheng:
+                intent.setClass(getActivity(), TeKuaiShangChengActivity.class);
                 startActivity(intent);
                 break;
 

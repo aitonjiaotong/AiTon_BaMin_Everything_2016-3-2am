@@ -17,14 +17,14 @@
     <!-- 短信验证 -->
     <!-- 读取短信 -->
     <uses-permission android:name="android.permission.READ_SMS" />
-    <!--百度地图-->
+    <!-- 百度地图 -->
     <!-- 百度地图开发相关权限 -->
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!--百度地图-->
 
+    <!-- 百度地图 -->
     <!-- 读取短信 -->
     <!-- 支付宝相关权限 -->
     <!-- 和短信验证权限重复 -->
@@ -35,10 +35,12 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <!-- 百度地图开发KEY -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="YpQxGG9vQeeAeg9bT51FEZGR" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -130,7 +132,6 @@
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/title_activity_welcome" >
-
         </activity>
         <activity
             android:name=".GuideActivity"
@@ -146,8 +147,8 @@
         </activity>
         <activity
             android:name=".EverytingActivity"
-            android:windowSoftInputMode="adjustNothing"
-            android:label="@string/title_activity_everyting" >
+            android:label="@string/title_activity_everyting"
+            android:windowSoftInputMode="adjustNothing" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -155,7 +156,7 @@
             </intent-filter>
         </activity>
 
-        <!--打车类Activity-->
+        <!-- 打车类Activity -->
         <activity
             android:name=".DaCheActivity.MainDacheActivity"
             android:label="@string/app_name" >
@@ -224,8 +225,8 @@
             android:name=".DaCheActivity.ZiJiaZuChe05Activity"
             android:label="@string/title_activity_zi_jia_zu_che05" >
         </activity>
-        <!--打车类Activity-->
-        <!--公交-->
+        <!-- 打车类Activity -->
+        <!-- 公交 -->
         <activity
             android:name=".busline.busline_aiton.MainBusLineActivity"
             android:label="@string/app_name" >
@@ -264,8 +265,8 @@
             android:name=".busline.busline_aiton.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
-        <!--公交-->
-        <!--吃喝玩乐-->
+        <!-- 公交 -->
+        <!-- 吃喝玩乐 -->
         <activity
             android:name=".ChiHeWanLe.MainCheHeWanLeActivity"
             android:label="@string/app_name" >
@@ -326,8 +327,8 @@
             android:name=".ChiHeWanLe.LActivity"
             android:label="@string/title_activity_l" >
         </activity>
-        <!--吃喝玩乐-->
-        <!--代办跑腿-->
+        <!-- 吃喝玩乐 -->
+        <!-- 代办跑腿 -->
         <activity
             android:name=".daiBanPaoTui.MainDaiBanPaoTuiActivity"
             android:label="@string/app_name" >
@@ -384,8 +385,8 @@
             android:name=".daiBanPaoTui.SongCanActivity"
             android:label="@string/title_activity_song_can" >
         </activity>
-        <!--代办跑腿-->
-        <!--汽车管家-->
+        <!-- 代办跑腿 -->
+        <!-- 汽车管家 -->
         <activity
             android:name=".qicheguanjia.MainQiCheGuanJiaActivity"
             android:label="@string/app_name" >
@@ -401,6 +402,15 @@
         <activity
             android:name=".qicheguanjia.CActivity"
             android:label="@string/title_activity_c" >
+        </activity>
+        <!-- 汽车管家 -->
+        <activity
+            android:name=".YouHuiChongZhi.YuoHuiChongZhiActivity"
+            android:label="@string/title_activity_yuo_hui_chong_zhi" >
+        </activity>
+        <activity
+            android:name=".TeKuaiShangCheng.TeKuaiShangChengActivity"
+            android:label="@string/title_activity_te_kuai_shang_cheng" >
         </activity>
         <!--汽车管家-->
         <!--旅行旅游-->
