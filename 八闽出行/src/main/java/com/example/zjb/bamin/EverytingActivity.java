@@ -1,14 +1,30 @@
 package com.example.zjb.bamin;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.zjb.bamin.R;
+import com.example.zjb.bamin.fragment.Fragment01;
+import com.example.zjb.bamin.fragment.Fragment02;
+import com.example.zjb.bamin.fragment.MineFragment;
 
 public class EverytingActivity extends AppCompatActivity {
-
+    private String[] tabsItem = new String[]{
+            "查询",
+            "订单",
+            "我的",
+    };
+    private Class[] fragment = new Class[]{
+            Fragment01.class,
+            Fragment02.class,
+            MineFragment.class,
+    };
+    private int[] imgRes = new int[]{
+            R.drawable.ic_home_search_selector,
+            R.drawable.ic_home_order_selector,
+            R.drawable.ic_home_me_selector
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

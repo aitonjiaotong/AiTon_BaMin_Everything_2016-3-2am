@@ -86,7 +86,14 @@ public class Fragment02 extends Fragment implements WaveSwipeRefreshLayout.OnRef
     @Override
     public void onStart() {
         super.onStart();
+        SharedPreferences sp = getActivity().getSharedPreferences("isLogin", Context.MODE_PRIVATE);
+        mId = sp.getString("id", "");
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        mSwipe.setRefreshing(false);
     }
 
     private void queryAccountIdToOrder() {
