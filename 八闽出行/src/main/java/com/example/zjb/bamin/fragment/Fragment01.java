@@ -114,6 +114,7 @@ public class Fragment01 extends Fragment implements View.OnClickListener
             @Override
             public void onResponse(String s)
             {
+                Log.e("onResponse ", "onResponse banner"+s);
                 Type type = new TypeToken<ArrayList<BannerInfo>>()
                 {
                 }.getType();
@@ -312,6 +313,7 @@ public class Fragment01 extends Fragment implements View.OnClickListener
             }else
             {
                 int pager_index = position % bannerData.size();
+                Log.e("getItem ", "getItem "+bannerData.get(pager_index).getUrl());
                 return new BannerFragment(pager_index, bannerData.get(pager_index).getUrl(),bannerData.get(pager_index).getUrl2());
             }
         }
