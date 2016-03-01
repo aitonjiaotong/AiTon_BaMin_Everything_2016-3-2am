@@ -19,6 +19,7 @@ import com.example.administrator.shane_library.shane.utils.VolleyListener;
 import com.example.zjb.bamin.DaCheActivity.MainDacheActivity;
 import com.example.zjb.bamin.MainActivity;
 import com.example.zjb.bamin.R;
+import com.example.zjb.bamin.busline.busline_aiton.MainBusLineActivity;
 import com.example.zjb.bamin.constant.Constant;
 import com.example.zjb.bamin.customView.ViewPagerIndicator;
 import com.example.zjb.bamin.fragment.BannerFragment;
@@ -136,7 +137,8 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.ll_onlinebus:
-
+                intent.setClass(getActivity(),MainBusLineActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_ticket:
                 intent.setClass(getActivity(),MainActivity.class);
