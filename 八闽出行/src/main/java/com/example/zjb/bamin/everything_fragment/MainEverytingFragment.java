@@ -58,14 +58,10 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                              Bundle savedInstanceState)
     {
         mLayout = inflater.inflate(R.layout.fragment_main, null);
-
+        initData();
         findID();
         initUI();
         setListener();
-        initData();
-
-
-
         return mLayout;
     }
 
@@ -74,6 +70,7 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         //初始化Banner数据
         initBannerData();
     }
+
     private void initBannerData()
     {
         HTTPUtils.get(getActivity(), Constant.URLFromAiTon.GET_BANNER_IMG, new VolleyListener()
@@ -133,19 +130,19 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
-        Intent intent= new Intent();
+        Intent intent = new Intent();
         switch (v.getId())
         {
             case R.id.ll_onlinebus:
-                intent.setClass(getActivity(),MainBusLineActivity.class);
+                intent.setClass(getActivity(), MainBusLineActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ll_ticket:
-                intent.setClass(getActivity(),MainActivity.class);
+                intent.setClass(getActivity(), MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ll_taxi:
-                intent.setClass(getActivity(),MainDacheActivity.class);
+                intent.setClass(getActivity(), MainDacheActivity.class);
                 startActivity(intent);
                 break;
 
@@ -164,14 +161,14 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         @Override
         public Fragment getItem(int position)
         {
-            if(bannerData.size()==0)
+            int index = position % mImageID.length;
+            // 数据下载之前
+            if (bannerData.size() == 0)
             {
-                int pager_index = position % mImageID.length;
-                return new BannerFragment(pager_index, mImageID[pager_index]);
-            }else
+                return new BannerFragment(index, mImageID[index]);
+            } else
             {
-                int pager_index = position % bannerData.size();
-                return new BannerFragment(pager_index, bannerData.get(pager_index).getUrl(),bannerData.get(pager_index).getUrl2());
+                return new BannerFragment(index, bannerData.get(index).getUrl(), bannerData.get(index).getUrl2());
             }
         }
 

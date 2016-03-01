@@ -23,7 +23,7 @@ public class EverytingActivity extends AppCompatActivity {
             MineEverythingFragment.class,
     };
     private int[] imgRes = new int[]{
-            R.drawable.ic_home_search_selector,
+            R.drawable.apollo_ic_userinfo_selector,
             R.drawable.ic_home_order_selector,
             R.drawable.ic_home_me_selector
     };

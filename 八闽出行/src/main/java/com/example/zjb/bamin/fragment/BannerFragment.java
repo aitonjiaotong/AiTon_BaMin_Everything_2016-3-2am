@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,45 +72,51 @@ public class BannerFragment extends Fragment
     private void initUI()
     {
         mBanner_image = (ImageView) mLayout.findViewById(R.id.iv_banner_image);
-        if ("".equals(mImageUrl))
-        {
-            mBanner_image.setImageResource(mImageId);
-        } else
+        if ("".equals(mImageId) && mImageUrl.length() > 0)
         {
             UILUtils.displayImageNoAnim(mImageUrl, mBanner_image);
+        } else
+        {
+            mBanner_image.setImageResource(mImageId);
         }
         mBanner_image.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                if (mPosition == 0)
+                if (!"".equals(mRedPacketUrl))
                 {
-                    Log.e("onClick ", "onClick "+mRedPacketUrl);
                     SharedPreferences sp = getActivity().getSharedPreferences("isLogin", Context.MODE_PRIVATE);
                     String account_id = sp.getString("id", "");
-                    Log.e("onClick :account_id", account_id);
+                    String isLogin = sp.getString("phoneNum", "");
                     //弹出抢红包对话框
-                    HTTPUtils.get(getActivity(), mRedPacketUrl + "&account_id=" + account_id, new VolleyListener()
+                    if (!"".equals(isLogin))
                     {
-                        @Override
-                        public void onErrorResponse(VolleyError volleyError)
+                        HTTPUtils.get(getActivity(), mRedPacketUrl + "&account_id=" + account_id, new VolleyListener()
                         {
-                        }
-
-                        @Override
-                        public void onResponse(String s)
-                        {
-                            if ("".equals(s))
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError)
                             {
-                                Toast.makeText(getActivity(), "您已领取过红包，每个用户限领一份", Toast.LENGTH_SHORT).show();
-                            } else
-                            {
-                                RedPacket redPacket = GsonUtils.parseJSON(s, RedPacket.class);
-                                showPopWindows("￥" + redPacket.getAmount());
                             }
-                        }
-                    });
+
+                            @Override
+                            public void onResponse(String s)
+                            {
+                                if ("".equals(s))
+                                {
+                                    Toast.makeText(getActivity(), "您已领取过红包，每个用户限领一份", Toast.LENGTH_SHORT).show();
+                                } else
+                                {
+                                    RedPacket redPacket = GsonUtils.parseJSON(s, RedPacket.class);
+                                    showPopWindows("￥" + redPacket.getAmount());
+                                }
+                            }
+                        });
+                    } else
+                    {
+                        Toast.makeText(getActivity(), "您还未登录", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
