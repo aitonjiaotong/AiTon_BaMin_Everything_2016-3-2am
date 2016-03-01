@@ -1,55 +1,48 @@
 package com.example.zjb.bamin;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.zjb.bamin.fragment.Fragment01;
-import com.example.zjb.bamin.fragment.Fragment02;
-import com.example.zjb.bamin.fragment.MineFragment;
+import com.example.zjb.bamin.everything_fragment.MainEverytingFragment;
+import com.example.zjb.bamin.everything_fragment.MineEverythingFragment;
+import com.example.zjb.bamin.everything_fragment.OrderEverythingFragment;
 
 public class EverytingActivity extends AppCompatActivity {
     private String[] tabsItem = new String[]{
-            "查询",
+            "首页",
             "订单",
-            "我的",
+            "个人中心",
     };
     private Class[] fragment = new Class[]{
-            Fragment01.class,
-            Fragment02.class,
-            MineFragment.class,
+            MainEverytingFragment.class,
+            OrderEverythingFragment.class,
+            MineEverythingFragment.class,
     };
     private int[] imgRes = new int[]{
             R.drawable.ic_home_search_selector,
             R.drawable.ic_home_order_selector,
             R.drawable.ic_home_me_selector
     };
+    private FragmentTabHost mTabHost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_everyting);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_everyting, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        mTabHost = (FragmentTabHost) findViewById(R.id.tabHost);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtab);
+        for (int i = 0; i < tabsItem.length; i++) {
+            View inflate = getLayoutInflater().inflate(R.layout.tabs_item, null);
+            TextView tabs_text = (TextView) inflate.findViewById(R.id.tabs_text);
+            ImageView tabs_img = (ImageView) inflate.findViewById(R.id.tabs_img);
+            tabs_text.setText(tabsItem[i]);
+            tabs_img.setImageResource(imgRes[i]);
+            mTabHost.addTab(mTabHost.newTabSpec(tabsItem[i]).setIndicator(inflate), fragment[i], null);
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
 }
