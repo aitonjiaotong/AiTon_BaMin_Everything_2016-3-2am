@@ -25,6 +25,8 @@ import com.example.zjb.bamin.constant.Constant;
 import com.example.zjb.bamin.customView.ViewPagerIndicator;
 import com.example.zjb.bamin.daiBanPaoTui.MainDaiBanPaoTuiActivity;
 import com.example.zjb.bamin.fragment.BannerFragment;
+import com.example.zjb.bamin.kuaidiwuliu.MainkuaidiwuliuActivity;
+import com.example.zjb.bamin.lvyoulvxing.MainlvyouActivity;
 import com.example.zjb.bamin.models.about_banner.BannerInfo;
 import com.example.zjb.bamin.qicheguanjia.MainQiCheGuanJiaActivity;
 import com.google.gson.reflect.TypeToken;
@@ -130,6 +132,8 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         mLayout.findViewById(R.id.chihewanle).setOnClickListener(this);
         mLayout.findViewById(R.id.daibanpaotui).setOnClickListener(this);
         mLayout.findViewById(R.id.qicheguanjia).setOnClickListener(this);
+        mLayout.findViewById(R.id.lvyoulvxing).setOnClickListener(this);
+        mLayout.findViewById(R.id.kuaidiwuliu).setOnClickListener(this);
     }
 
 
@@ -141,6 +145,14 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         {
             case R.id.daibanpaotui:
                 intent.setClass(getActivity(),MainDaiBanPaoTuiActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.kuaidiwuliu:
+                intent.setClass(getActivity(), MainkuaidiwuliuActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.lvyoulvxing:
+                intent.setClass(getActivity(),MainlvyouActivity.class);
                 startActivity(intent);
                 break;
             case R.id.qicheguanjia:

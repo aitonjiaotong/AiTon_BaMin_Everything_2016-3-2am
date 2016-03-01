@@ -132,4 +132,13 @@
     <!--代办跑腿-->
     <!--汽车管家-->
     <!--汽车管家-->
+    <string name="title_activity_chu_jing_you">ChuJingYouActivity</string>
+    <string name="title_activity_guo_nei_you">GuoNeiYouActivity</string>
+    <string name="title_activity_zhou_bian_you">ZhouBianYouActivity</string>
+
+    <string name="title_activity_kuai_di_xia_dan">KuaiDiXiaDanActivity</string>
+    <string name="title_activity_di_zhi">DiZhiActivity</string>
+    <string name="title_activity_kuai_di_cha_xun">KuaiDiChaXunActivity</string>
+    <string name="title_activity_wu_liu_xia_dan">WuLiuXiaDanActivity</string>
+    <string name="title_activity_wu_liu_cha_xun">WuLiuChaXunActivity</string>
 </resources>

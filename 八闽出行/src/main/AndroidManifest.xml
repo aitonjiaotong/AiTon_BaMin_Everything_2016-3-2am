@@ -403,6 +403,50 @@
             android:label="@string/title_activity_c" >
         </activity>
         <!--汽车管家-->
+        <!--旅行旅游-->
+        <activity
+            android:name=".lvyoulvxing.MainlvyouActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".lvyoulvxing.ChuJingYouActivity"
+            android:label="@string/title_activity_chu_jing_you" >
+        </activity>
+        <activity
+            android:name=".lvyoulvxing.GuoNeiYouActivity"
+            android:label="@string/title_activity_guo_nei_you" >
+        </activity>
+        <activity
+            android:name=".lvyoulvxing.ZhouBianYouActivity"
+            android:label="@string/title_activity_zhou_bian_you" >
+        </activity>
+        <!--旅行旅游-->
+        <!--快递物流-->
+        <activity
+            android:name=".kuaidiwuliu.MainkuaidiwuliuActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".kuaidiwuliu.KuaiDiXiaDanActivity"
+            android:label="@string/title_activity_kuai_di_xia_dan" >
+        </activity>
+        <activity
+            android:name=".kuaidiwuliu.DiZhiActivity"
+            android:label="@string/title_activity_di_zhi" >
+        </activity>
+        <activity
+            android:name=".kuaidiwuliu.KuaiDiChaXunActivity"
+            android:label="@string/title_activity_kuai_di_cha_xun" >
+        </activity>
+        <activity
+            android:name=".kuaidiwuliu.WuLiuXiaDanActivity"
+            android:label="@string/title_activity_wu_liu_xia_dan" >
+        </activity>
+        <activity
+            android:name=".kuaidiwuliu.WuLiuChaXunActivity"
+            android:label="@string/title_activity_wu_liu_cha_xun" >
+        </activity>
+        <!--快递物流-->
     </application>
 
 </manifest>
