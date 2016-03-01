@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,8 +73,9 @@ public class BannerFragment extends Fragment
     private void initUI()
     {
         mBanner_image = (ImageView) mLayout.findViewById(R.id.iv_banner_image);
-        if ("".equals(mImageId) && mImageUrl.length() > 0)
+        if (mImageUrl!=null)
         {
+            Log.e("initUI ", "initUI "+mImageUrl);
             UILUtils.displayImageNoAnim(mImageUrl, mBanner_image);
         } else
         {
