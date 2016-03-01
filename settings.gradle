@@ -1,1 +1,1 @@
-include ':app', ':pulltorefresh', ':circleimageview', ':SMSSDK', ':下拉放大图片', ':library', ':lib_shane', ':八闽出行'
+include ':app', ':pulltorefresh', ':circleimageview', ':SMSSDK', ':下拉放大图片', ':library', ':lib_shane', ':八闽出行', ':lib_slidingmenu'

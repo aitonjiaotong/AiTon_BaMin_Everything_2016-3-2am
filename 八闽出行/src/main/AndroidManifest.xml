@@ -457,6 +457,51 @@
             android:label="@string/title_activity_wu_liu_cha_xun" >
         </activity>
         <!--快递物流-->
+
+        <!--保险超市-->
+        <activity
+            android:name=".BaoXianChaoShi.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.WebActivity"
+            android:label="@string/title_activity_web" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.SetActivity"
+            android:label="@string/title_activity_set" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.WodebaodanActivity"
+            android:label="@string/title_activity_wodebaodan" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.WodedingdanActivity"
+            android:label="@string/title_activity_wodedingdan" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.WodehongbaoActivity"
+            android:label="@string/title_activity_wodehongbao" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.BeibaorenActivity"
+            android:label="@string/title_activity_beibaoren" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.GerenxinxiActivity"
+            android:label="@string/title_activity_gerenxinxi" >
+        </activity>
+        <activity
+            android:name=".BaoXianChaoShi.XiaoxizhongxinActivity"
+            android:label="@string/title_activity_xiaoxizhongxin" >
+        </activity>
+
+        <!--保险超市-->
     </application>
 
 </manifest>

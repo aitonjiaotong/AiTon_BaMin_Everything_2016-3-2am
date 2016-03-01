@@ -139,6 +139,7 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
         mLayout.findViewById(R.id.baoxianchaoshi).setOnClickListener(this);
         mLayout.findViewById(R.id.lvyoulvxing).setOnClickListener(this);
         mLayout.findViewById(R.id.kuaidiwuliu).setOnClickListener(this);
+        mLayout.findViewById(R.id.baoxianchaoshi).setOnClickListener(this);
     }
 
 
@@ -187,6 +188,10 @@ public class MainEverytingFragment extends Fragment implements View.OnClickListe
                 break;
             case R.id.tekuaishangcheng:
                 intent.setClass(getActivity(), TeKuaiShangChengActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.baoxianchaoshi:
+                intent.setClass(getActivity(), com.example.zjb.bamin.BaoXianChaoShi.MainActivity.class);
                 startActivity(intent);
                 break;
 

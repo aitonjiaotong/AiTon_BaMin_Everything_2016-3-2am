@@ -143,4 +143,15 @@
     <string name="title_activity_kuai_di_cha_xun">KuaiDiChaXunActivity</string>
     <string name="title_activity_wu_liu_xia_dan">WuLiuXiaDanActivity</string>
     <string name="title_activity_wu_liu_cha_xun">WuLiuChaXunActivity</string>
+
+
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_set">SetActivity</string>
+    <string name="title_activity_wodebaodan">WodebaodanActivity</string>
+    <string name="title_activity_wodedingdan">WodedingdanActivity</string>
+    <string name="title_activity_wodehongbao">WodehongbaoActivity</string>
+    <string name="title_activity_beibaoren">BeibaorenActivity</string>
+    <string name="title_activity_gerenxinxi">GerenxinxiActivity</string>
+    <string name="title_activity_xiaoxizhongxin">XiaoxizhongxinActivity</string>
+
 </resources>
