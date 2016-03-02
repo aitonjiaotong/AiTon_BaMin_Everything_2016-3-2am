@@ -115,26 +115,29 @@ public class SelectStationArriveActivity extends AppCompatActivity implements Vi
         //常用地址相关---------------start
         mLv_commonly_used_address = (ListView) findViewById(R.id.lv_commonly_used_address);
         mLv_commonly_used_address.setAdapter(mAdapter);
-        mLv_commonly_used_address.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                Intent intent = new Intent();
-                if ("沙县".equals(mComUsedAddrData.get(position)))
-                {
-                    intent.putExtra(Constant.IntentKey.KEY_ARRIVE_ZONE_NAME, mComUsedAddrData.get(position));
-                } else
-                {
-                    intent.putExtra(Constant.IntentKey.KEY_ARRIVE_ZONE_NAME, GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
-                }
-                setResult(Constant.RequestAndResultCode.RESULT_CODE_ARRIVE_COMMONLY_USED_ADDR, intent);
-                finish();
-            }
-        });
         //获取登陆状态
         SharedPreferences sp = getSharedPreferences("isLogin", Context.MODE_PRIVATE);
         mMPhoneNum = sp.getString("phoneNum", "");
+        if (!"".equals(mMPhoneNum))
+        {
+            mLv_commonly_used_address.setOnItemClickListener(new AdapterView.OnItemClickListener()
+            {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+                {
+                    Intent intent = new Intent();
+                    if ("沙县".equals(mComUsedAddrData.get(position)))
+                    {
+                        intent.putExtra(Constant.IntentKey.KEY_ARRIVE_ZONE_NAME, mComUsedAddrData.get(position));
+                    } else
+                    {
+                        intent.putExtra(Constant.IntentKey.KEY_ARRIVE_ZONE_NAME, GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
+                    }
+                    setResult(Constant.RequestAndResultCode.RESULT_CODE_ARRIVE_COMMONLY_USED_ADDR, intent);
+                    finish();
+                }
+            });
+        }
         if (!"".equals(mMPhoneNum))
         {
             //登陆状态下 查询本地数据库中是否有保存常用地址
@@ -346,9 +349,6 @@ public class SelectStationArriveActivity extends AppCompatActivity implements Vi
             {
                 parent_list_xianshi_name.clear();
                 parent_list_xianshi_name.addAll(parent_list_data.get(mShiPostion).getSubZones().get(position).getSubZones());
-                /**----移除列表中ZoneName为"市区"的下标值----**/
-                /****注意:目前返回的Json该值位于List的最后一个元素****/
-                parent_list_xianshi_name.remove(parent_list_xianshi_name.size() - 1);
 
                 mMyGridViewAdapter.notifyDataSetChanged();
                 mLv_commonly_used_address.setVisibility(View.GONE);

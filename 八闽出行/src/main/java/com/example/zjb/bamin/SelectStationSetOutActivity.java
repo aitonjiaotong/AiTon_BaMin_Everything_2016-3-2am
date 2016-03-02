@@ -198,33 +198,34 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
     }
 
 
-
-
     //初始化常用地址列表
     private void initCommonlyUsedAddr()
     {
-        mLv_commonly_used_address = (ListView) findViewById(R.id.lv_commonly_used_address);
-        mLv_commonly_used_address.setAdapter(mCommUseAddrAdapter);
-        mLv_commonly_used_address.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                Intent data = new Intent();
-                if ("沙县".equals(mComUsedAddrData.get(position)))
-                {
-                    data.putExtra(Constant.IntentKey.KEY_SET_OUT_ZONE_NAME, mComUsedAddrData.get(position));
-                } else
-                {
-                    LogUtil.show("onItemClick SelectStationSetOutActivity", GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
-                    data.putExtra(Constant.IntentKey.KEY_SET_OUT_ZONE_NAME, GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
-                }
-                setResult(Constant.RequestAndResultCode.RESULT_CODE_SET_OUT_ADDR, data);
-                finish();
-            }
-        });
         SharedPreferences sp = getSharedPreferences("isLogin", Context.MODE_PRIVATE);
         mMPhoneNum = sp.getString("phoneNum", "");
+        mLv_commonly_used_address = (ListView) findViewById(R.id.lv_commonly_used_address);
+        mLv_commonly_used_address.setAdapter(mCommUseAddrAdapter);
+        if (!"".equals(mMPhoneNum))
+        {
+            mLv_commonly_used_address.setOnItemClickListener(new AdapterView.OnItemClickListener()
+            {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+                {
+                    Intent data = new Intent();
+                    if ("沙县".equals(mComUsedAddrData.get(position)))
+                    {
+                        data.putExtra(Constant.IntentKey.KEY_SET_OUT_ZONE_NAME, mComUsedAddrData.get(position));
+                    } else
+                    {
+                        LogUtil.show("onItemClick SelectStationSetOutActivity", GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
+                        data.putExtra(Constant.IntentKey.KEY_SET_OUT_ZONE_NAME, GetLastWordUtil.GetRidOfLastWord(mComUsedAddrData.get(position)));
+                    }
+                    setResult(Constant.RequestAndResultCode.RESULT_CODE_SET_OUT_ADDR, data);
+                    finish();
+                }
+            });
+        }
         if (!"".equals(mMPhoneNum))
         {
             //登陆状态下 查询本地数据库中是否有保存常用地址
@@ -300,15 +301,14 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
                 {
                 }.getType();
                 SetOutData = GsonUtils.parseJSONArray(s, type);
-                /**----移除列表中ZoneName为"市区"的下标值----**/
-                /****注意:目前返回的Json该值位于List的最后一个元素****/
+                LogUtil.show("onResponse SelectStationSetOutActivity", s);
+                mAddressSetOutData.clear();
+                LogUtil.show("mAddressSetOutData.size", mAddressSetOutData.size() + "");
+                LogUtil.show("SetOutData.size", SetOutData.size() + "");
                 for (int i = 0; i < SetOutData.size(); i++)
                 {
-                    for (int j = 0; j < SetOutData.get(i).getSubZones().size(); j++)
-                    {
-                        mAddressSetOutData.addAll(SetOutData.get(i).getSubZones().get(j).getSubZones());
-                        mAddressSetOutData.remove((mAddressSetOutData.size() - 1));
-                    }
+
+                    mAddressSetOutData.addAll(SetOutData.get(i).getSubZones().get(1).getSubZones());
 
                 }
                 if (mAddressSetOutData != null && mAddressSetOutData.size() > 0)
@@ -506,6 +506,8 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
             if (mAddressSetOutData != null && mAddressSetOutData.size() > 0)
             {
                 tv_cityName.setText(mAddressSetOutData.get(position).getZoneName());
+//                tv_cityName.setText(SetOutData.get(position).getZoneName());
+                LogUtil.show("getView GridViewAdapter", mAddressSetOutData.get(position).getZoneName());
             }
             if (pinYin_data != null && pinYin_data.size() > 0)
             {
@@ -532,15 +534,21 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
         Collections.reverse(mComUsedAddrData);
         mCursor_query.close();
     }
-    private void AnimFromRightToLeft() {
+
+    private void AnimFromRightToLeft()
+    {
         overridePendingTransition(R.anim.fade_in, R.anim.push_left_out);
     }
 
-    public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
-        if(keyCode== KeyEvent.KEYCODE_BACK){
+    public boolean onKeyDown(int keyCode, android.view.KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK)
+        {
             finish();
             AnimFromRightToLeft();
         }
         return super.onKeyDown(keyCode, event);
-    };
+    }
+
+    ;
 }
