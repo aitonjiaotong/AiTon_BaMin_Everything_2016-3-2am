@@ -436,6 +436,7 @@ public class SelectStationArriveActivity extends AppCompatActivity implements Vi
             View inflate = getLayoutInflater().inflate(R.layout.list_item_city_set_out, null);
             TextView tv_city = (TextView) inflate.findViewById(R.id.tv_city);
             tv_city.setText(parent_list_xianshi_name.get(position).getZoneName());
+//            ---
             return inflate;
         }
     }

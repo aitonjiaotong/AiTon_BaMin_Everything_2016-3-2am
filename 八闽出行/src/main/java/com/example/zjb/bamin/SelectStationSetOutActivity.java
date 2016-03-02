@@ -307,9 +307,7 @@ public class SelectStationSetOutActivity extends AppCompatActivity implements Vi
                 LogUtil.show("SetOutData.size", SetOutData.size() + "");
                 for (int i = 0; i < SetOutData.size(); i++)
                 {
-
                     mAddressSetOutData.addAll(SetOutData.get(i).getSubZones().get(1).getSubZones());
-
                 }
                 if (mAddressSetOutData != null && mAddressSetOutData.size() > 0)
                 {
